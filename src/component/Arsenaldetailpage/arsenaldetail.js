@@ -1,19 +1,16 @@
-// Manudetail.js
-
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './manudetail.css'; // Import CSS file for styling
 
-const Manudetail = () => {
-  const { id } = useParams();
+const arsenaldetail = () => {
+  const { id } = useParams();  // Assuming category is fixed as 'lfcdetails'
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/Manudetails/${id}`);
-        setProduct(response.data);
+        const response = await fetch(`http://localhost:5000/arsdetails/${id}`);
+        const data = await response.json();
+        setProduct(data);
       } catch (error) {
         console.error('Error fetching product:', error);
       }
@@ -23,17 +20,19 @@ const Manudetail = () => {
   }, [id]);
 
   return (
-    <div className="container">
+    <div>
       {product ? (
-        <div className="product-details">
+        <div>
           <h2>{product.name}</h2>
           <p>{product.description}</p>
           <p>Price: ${product.price}</p>
           {/* Add more details as needed */}
         </div>
-      ) : null}
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
 
-export default Manudetail;
+export default arsenaldetail;

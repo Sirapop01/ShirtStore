@@ -15,7 +15,10 @@ collections = {
     "collection2": db["shirtmancity"],
     "collection3": db["shirtLiver"],
     "collection4": db["shirtarsenal"],
-    "detail1": db["manushirt"]
+    "detail1": db["manudetail"],
+    "detail2": db["lfcdetail"],
+    "detail3": db["Mancitydetails"],
+    "detail4": db["arsdetail"]
 }
 
 @app.route("/")

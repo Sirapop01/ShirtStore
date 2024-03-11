@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import './Manci.css';
 import LogoManci from './Pic/Mancity.png'; 
+import { Link } from 'react-router-dom';
 
 class Manci extends Component {
     constructor() {
@@ -36,19 +37,21 @@ class Manci extends Component {
             <center><h1 style={{ color: 'white' }}>Manchester City FC</h1></center>
             <center><h2 style={{ color: 'white' }}>{products.length} Products</h2></center>
     
-            {/* Display the product data */}
-            <div className="product-list">
-              {products.map(product => (
-                <div key={product._id} className="product-item">
-                  <img src={product.img} alt={product.name} className="product-image" />
-                  <h3 className="product-name">{product.name}</h3>
-                  <p className="product-price">{`ราคา: ${product.price} บาท`}</p>
-                </div>
-              ))}
+            {/* Display the product data with links to the detail page */}
+       <div className="product-list">
+          {products.map(product => (
+            <Link key={product._id} to={"/Mancidetailpage/" + product._id} className="product-link">
+            <div className="product-item">
+              <img src={product.img} alt={product.name} className="product-image" />
+              <h3 className="product-name">{product.name}</h3>
+              <p className="product-price">ราคา: {product.price} บาท</p>
             </div>
-          </div>
-        );
-      }
+          </Link>
+          ))}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Manci;

@@ -1,15 +1,14 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-const ProductDetail = () => {
-  const { category, id } = useParams();
+const Liverdetail = () => {
+  const { id } = useParams();  // Assuming category is fixed as 'lfcdetails'
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/${category}/${id}`);
+        const response = await fetch(`http://localhost:5000/lfcdetails/${id}`);
         const data = await response.json();
         setProduct(data);
       } catch (error) {
@@ -18,7 +17,7 @@ const ProductDetail = () => {
     };
 
     fetchProduct();
-  }, [category, id]);
+  }, [id]);
 
   return (
     <div>
@@ -36,4 +35,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default Liverdetail;
