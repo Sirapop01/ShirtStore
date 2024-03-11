@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Set background color to white */
+    color: #000; /* Set text color to black */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff; /* Set background color to white */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .product-details {
+    text-align: center;
+  }
+  
+  .product-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000; /* Set text color to black */
+  }
+  
+  .product-description {
+    font-size: 16px;
+    color: #000; /* Set text color to black */
+    margin-bottom: 20px;
+  }
+  
+  .product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #7e7e7e;
+  }
+  
+  .back-to-list {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-to-list a {
+    text-decoration: none;
+    color: #7e7e7e;
+    font-weight: bold;
+  }
+  
+  .back-to-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .product-name {
+      font-size: 20px;
+      color: #000; /* Set text color to black */
+    }
+  
+    .product-description {
+      font-size: 14px;
+      color: #000; /* Set text color to black */
+    }
+  
+    .product-price {
+      font-size: 18px;
+      color: #7e7e7e;
+    }
+  }
+  

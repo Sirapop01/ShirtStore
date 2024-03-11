@@ -9,7 +9,7 @@ import Mancipage from "./component/Mancipage/Manci";
 import Liverpoolpage from "./component/Liverpoolpage/Liver";
 import Arsenalpage from "./component/Arsenalpage/Arsenal";
 import Liverdetailpage from "./component/Liverdetailpage/Liverdetail";
-import Manudetail from "./component/Manudetailpage/manudetail"
+import Manudetailpage from "./component/Manudetailpage/manudetail"
 
 function App() {
   return (
@@ -54,8 +54,8 @@ function App() {
             <Liverpoolpage />
           </Route>
 
-          <Route path="/Manudetail">
-            <Manudetail />
+          <Route path="/Manudetailpage">
+            <Manudetailpage />
           </Route>
         </Switch>
       </div>

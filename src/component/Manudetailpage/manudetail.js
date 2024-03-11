@@ -1,15 +1,15 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './manudetail.css'; // Import CSS file for styling
 
-const ProductDetail = () => {
-  const { category, id } = useParams();
+const Manudetail = () => {
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/${category}/${id}`);
+        const response = await fetch(`http://localhost:5000/Manudetails/${id}`);
         const data = await response.json();
         setProduct(data);
       } catch (error) {
@@ -18,12 +18,12 @@ const ProductDetail = () => {
     };
 
     fetchProduct();
-  }, [category, id]);
+  }, [id]);
 
   return (
-    <div>
+    <div className="container">
       {product ? (
-        <div>
+        <div className="product-details">
           <h2>{product.name}</h2>
           <p>{product.description}</p>
           <p>Price: ${product.price}</p>
@@ -36,4 +36,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default Manudetail;
