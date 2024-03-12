@@ -15,8 +15,8 @@ collections = {
     "collection2": db["shirtmancity"],
     "collection3": db["shirtLiver"],
     "collection4": db["shirtarsenal"],
-    "detail1": db["manudetail"],
-    "detail2": db["lfcdetail"],
+    "detail1": db["Manudetails"],
+    "detail2": db["lfcdetails"],
     "detail3": db["Mancitydetails"],
     "detail4": db["arsdetail"]
 }

@@ -9,7 +9,8 @@ import Mancipage from "./component/Mancipage/Manci";
 import Liverpoolpage from "./component/Liverpoolpage/Liver";
 import Arsenalpage from "./component/Arsenalpage/Arsenal";
 import Liverdetailpage from "./component/Liverdetailpage/Liverdetail";
-import Manudetailpage from "./component/Manudetailpage/manudetail"
+import Manudetailpage from "./component/Manudetailpage/manudetail";
+import Manudetail from "./component/Manudetailpage/manudetail";
 
 function App() {
   return (
@@ -50,13 +51,15 @@ function App() {
           </Route>
 
           {/* Additional route for product details with parameter */}
-          <Route path="/Liverpoolpage">
-            <Liverpoolpage />
-          </Route>
-
-          <Route path="/Manudetailpage">
+          <Route exact path="/Manudetailpage/:id">
             <Manudetailpage />
           </Route>
+
+          {/* Route for individual product detail */}
+          <Route path="/Manudetailpage/:id">
+            <Manudetail />
+          </Route>
+
         </Switch>
       </div>
     </BrowserRouter>
