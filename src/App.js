@@ -88,6 +88,10 @@ function App() {
             <Liverdetail />
           </Route>
 
+          <Route>
+            
+          </Route>
+
         </Switch>
       </div>
     </BrowserRouter>
