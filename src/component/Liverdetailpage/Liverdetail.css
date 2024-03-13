@@ -1,82 +1,112 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff; /* Set background color to white */
-    color: #000; /* Set text color to black */
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #fff; /* Set background color to white */
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .product-details {
-    text-align: center;
-  }
-  
-  .product-name {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #000; /* Set text color to black */
-  }
-  
-  .product-description {
-    font-size: 16px;
-    color: #000; /* Set text color to black */
-    margin-bottom: 20px;
-  }
-  
-  .product-price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #7e7e7e;
-  }
-  
-  .back-to-list {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .back-to-list a {
-    text-decoration: none;
-    color: #7e7e7e;
-    font-weight: bold;
-  }
-  
-  .back-to-list a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive Styles */
-  @media only screen and (max-width: 600px) {
-    .container {
-      padding: 10px;
-    }
-  
-    .product-name {
-      font-size: 20px;
-      color: #000; /* Set text color to black */
-    }
-  
-    .product-description {
-      font-size: 14px;
-      color: #000; /* Set text color to black */
-    }
-  
-    .product-price {
-      font-size: 18px;
-      color: #7e7e7e;
-    }
-  }
-  
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff; /* Set background color to white */
+}
+
+.liver-heading {
+  color: black; /* สีข้อความเป็นสีดำ */
+  font-size: 24px; /* ขนาดตัวอักษร */
+  text-align: center; /* จัดข้อความตรงกลาง */
+  margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+  margin-left: -880px;
+}
+
+.product-Namelfc {
+  color: black;
+  font-size: 24px;
+  text-align: center; /* จัดข้อความไปทางขวา */
+  margin-left: 400px;
+  margin-top: -450px;
+}
+
+.product-detaillfc{
+display: flex;
+display: grid;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-right: 20px; /* ระยะห่างระหว่างคลาสทั้งสาม */
+grid-template-columns: repeat(3, 250px);
+margin-left: 500px;
+margin-top: 20px;
+}
+
+.product-detaillfc h3 {
+font-weight: normal; /* ตั้งค่าน้ำหนักของตัวอักษรเป็นปกติ */
+}
+
+.product-detaillfc .product-Startinglfc,
+.product-detaillfc .product-Highestlfc,
+.product-detaillfc .product-Lastlfc {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-right: 20px; /* ระยะห่างระหว่างคลาสทั้งสาม */
+font-weight: normal;
+color: gray;
+}
+
+.product-detaillfc .product-Startinglfc span,
+.product-detaillfc .product-Highestlfc span,
+.product-detaillfc .product-Lastlfc span {
+color: black;
+
+}
+
+.product-Imagelfc {
+margin-top: -400px;
+width: 400px; /* กำหนดความกว้างของรูป */
+height: 400px; /* กำหนดความสูงของรูป */
+border-top: 1px solid #000; /* เส้นขอบด้านบน */
+border-bottom: 1px solid #000; /* เส้นขอบด้านล่าง */
+border-left: 1px solid #000; /* เส้นขอบด้านล่าง */
+border-right: 1px solid #000; /* เส้นขอบด้านล่าง */
+}
+
+.product-listlfc {
+width: 700px;
+margin-top: 20px;
+margin-left: 5px;
+padding: 10px 0; /* เพิ่มพื้นที่ด้านบนและด้านล่างของ block */
+border-top: 1px solid #000; /* เพิ่มเส้นด้านบนของ block */
+border-bottom: 1px solid #000; /* เพิ่มเส้นด้านล่างของ block */
+font-weight: normal;
+}
+
+.product-listlfc h3 {
+width: 1000px; /* ปรับขนาดตามที่ต้องการ */
+margin-left: 45px;
+font-weight: normal;
+
+}
+
+.product-brandlfc,
+.product-colorlfc,
+.product-datelfc,
+.product-sizelfc {
+display: flex;
+justify-content: space-between;
+color: gray;
+}
+
+.product-brandlfc span,
+.product-colorlfc span,
+.product-datelfc span,
+.product-sizelfc span {
+margin-right: 400px;
+color: #000;
+}
+
+
+
+
+
+
+
+
+
+

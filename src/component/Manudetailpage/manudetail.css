@@ -11,18 +11,18 @@
     font-size: 24px; /* ขนาดตัวอักษร */
     text-align: center; /* จัดข้อความตรงกลาง */
     margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
-    margin-left: 120px;
+    margin-left: -880px;
   }
 
-  .product-Name {
+  .product-Namemanu {
     color: black;
     font-size: 24px;
     text-align: center; /* จัดข้อความไปทางขวา */
-    margin-right: 150px;
+    margin-left: 400px;
     margin-top: -450px;
   }
 
-  .product-detail{
+  .product-detailmanu{
   display: flex;
   display: grid;
   flex-direction: column;
@@ -34,13 +34,13 @@
   margin-top: 20px;
 }
 
-.product-detail h3 {
+.product-detailmanu h3 {
   font-weight: normal; /* ตั้งค่าน้ำหนักของตัวอักษรเป็นปกติ */
 }
 
-.product-detail .product-Starting,
-.product-detail .product-Highest,
-.product-detail .product-Last {
+.product-detailmanu .product-Startingmanu,
+.product-detailmanu .product-Highestmanu,
+.product-detailmanu .product-Lastmanu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,14 +50,14 @@
   color: gray;
 }
 
-.product-detail .product-Starting span,
-.product-detail .product-Highest span,
-.product-detail .product-Last span {
+.product-detailmanu .product-Startingmanu span,
+.product-detailmanu .product-Highestmanu span,
+.product-detailmanu .product-Lastmanu span {
   color: black;
 
 }
 
-.product-Image {
+.product-Imagemanu {
   margin-top: -400px;
   width: 400px; /* กำหนดความกว้างของรูป */
   height: 400px; /* กำหนดความสูงของรูป */
@@ -67,7 +67,7 @@
   border-right: 1px solid #000; /* เส้นขอบด้านล่าง */
 }
 
-.product-List {
+.product-Listmanu {
   width: 700px;
   margin-top: 20px;
   margin-left: 5px;
@@ -77,11 +77,28 @@
   font-weight: normal;
 }
 
-.product-List h3 {
+.product-Listmanu h3 {
   width: 1000px; /* ปรับขนาดตามที่ต้องการ */
   margin-left: 45px;
   font-weight: normal;
   
+}
+
+.product-brandmanu,
+.product-colormanu,
+.product-datemanu,
+.product-sizemanu {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+}
+
+.product-brandmanu span,
+.product-colormanu span,
+.product-datemanu span,
+.product-sizemanu span {
+  margin-right: 400px;
+  color: #000;
 }
 
 

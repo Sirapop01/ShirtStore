@@ -8,13 +8,14 @@ import ManUpage from "./component/ManUpage/Man_U";
 import Mancipage from "./component/Mancipage/Manci";
 import Liverpoolpage from "./component/Liverpoolpage/Liver";
 import Arsenalpage from "./component/Arsenalpage/Arsenal";
-import Liverdetailpage from "./component/Liverdetailpage/Liverdetail";
 import Manudetailpage from "./component/Manudetailpage/manudetail";
 import Manudetail from "./component/Manudetailpage/manudetail";
 import Arsenaldetailpage from "./component/Arsenaldetailpage/arsenaldetail";
 import Arsenaldetail from "./component/Arsenaldetailpage/arsenaldetail";
 import Mancidetailpage from "./component/Mancidetailpage/mancidetail";
 import Mancidetail from "./component/Mancidetailpage/mancidetail";
+import Liverdetailpage from "./component/Liverdetailpage/liverdetail";
+import Liverdetail from "./component/Liverdetailpage/liverdetail";
 
 function App() {
   return (
@@ -49,11 +50,6 @@ function App() {
             <Arsenalpage />
           </Route>
 
-          {/* Route for product details */}
-          <Route path="/Liverdetailpage">
-            <Liverdetailpage />
-          </Route>
-
           {/* Additional route for product details with parameter */}
           <Route exact path="/Manudetailpage/:id">
             <Manudetailpage />
@@ -81,6 +77,15 @@ function App() {
           {/* Route for individual product detail */}
           <Route path="/Mancidetailpage/:id">
             <Mancidetail />
+          </Route>
+
+          <Route exact path="/Liverdetailpage/:id">
+            <Liverdetailpage />
+          </Route>
+
+          {/* Route for individual product detail */}
+          <Route path="/Liverdetailpage/:id">
+            <Liverdetail />
           </Route>
 
         </Switch>

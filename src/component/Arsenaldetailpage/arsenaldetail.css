@@ -1,54 +1,102 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #fff; /* Set background color to white */
-  }
-  
-  .Manu-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* กำหนดความสูงเต็มหน้าจอ */
-    margin-top: -5vh;
-  }
-  
-  .Shirt-main-manu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .Shirt-Manu {
-    background-image: url(./Pict/arsshirt.png);
-    margin-right: 1000px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff; /* Set background color to white */
+}
 
-  .product-shirt {
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: black;
-  }
+.ars-heading {
+  color: black; /* สีข้อความเป็นสีดำ */
+  font-size: 24px; /* ขนาดตัวอักษร */
+  text-align: center; /* จัดข้อความตรงกลาง */
+  margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+  margin-left: -880px;
+}
 
-  .man-united-heading {
-    color: black; /* สีข้อความเป็นสีดำ */
-    font-size: 24px; /* ขนาดตัวอักษร */
-    text-align: center; /* จัดข้อความตรงกลาง */
-    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
-    margin-right: 1000px;
-  }
+.product-Namears {
+  color: black;
+  font-size: 24px;
+  text-align: center; /* จัดข้อความไปทางขวา */
+  margin-left: 450px;
+  margin-top: -450px;
+}
 
-  .product-Name {
-    color: black;
-    font-size: 24px;
-    text-align: right; /* จัดข้อความไปทางขวา */
-  }
+.product-detailars{
+display: flex;
+display: grid;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-right: 20px; /* ระยะห่างระหว่างคลาสทั้งสาม */
+grid-template-columns: repeat(3, 250px);
+margin-left: 500px;
+margin-top: 20px;
+}
 
-  
+.product-detailars h3 {
+font-weight: normal; /* ตั้งค่าน้ำหนักของตัวอักษรเป็นปกติ */
+}
 
-  
-  
+.product-detailars .product-Startingars,
+.product-detailars .product-Highestars,
+.product-detailars .product-Lastars {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-right: 20px; /* ระยะห่างระหว่างคลาสทั้งสาม */
+font-weight: normal;
+color: gray;
+}
+
+.product-detailars .product-Startingars span,
+.product-detailars .product-Highestars span,
+.product-detailars .product-Lastars span {
+color: black;
+
+}
+
+.product-Imagears {
+margin-top: -400px;
+width: 400px; /* กำหนดความกว้างของรูป */
+height: 400px; /* กำหนดความสูงของรูป */
+border-top: 1px solid #000; /* เส้นขอบด้านบน */
+border-bottom: 1px solid #000; /* เส้นขอบด้านล่าง */
+border-left: 1px solid #000; /* เส้นขอบด้านล่าง */
+border-right: 1px solid #000; /* เส้นขอบด้านล่าง */
+}
+
+.product-Listars {
+width: 700px;
+margin-top: 20px;
+margin-left: 5px;
+padding: 10px 0; /* เพิ่มพื้นที่ด้านบนและด้านล่างของ block */
+border-top: 1px solid #000; /* เพิ่มเส้นด้านบนของ block */
+border-bottom: 1px solid #000; /* เพิ่มเส้นด้านล่างของ block */
+font-weight: normal;
+}
+
+.product-Listars h3 {
+width: 1000px; /* ปรับขนาดตามที่ต้องการ */
+margin-left: 45px;
+font-weight: normal;
+
+}
+
+.product-brandars,
+.product-colorars,
+.product-datears,
+.product-sizears {
+display: flex;
+justify-content: space-between;
+color: gray;
+}
+
+.product-brandars span,
+.product-colorars span,
+.product-datears span,
+.product-sizears span {
+margin-right: 400px;
+color: #000;
+}
