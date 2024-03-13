@@ -46,7 +46,7 @@ class Man_U extends Component {
             <div className="product-item">
               <img src={product.img} alt={product.name} className="product-image" />
               <h3 className="product-name">{product.name}</h3>
-              <p className="product-price">ราคา: ${product.price} บาท</p>
+              <p className="product-price">ราคา: {product.price} บาท</p>
             </div>
           </Link>
           ))}

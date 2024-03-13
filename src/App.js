@@ -11,6 +11,9 @@ import Arsenalpage from "./component/Arsenalpage/Arsenal";
 import Liverdetailpage from "./component/Liverdetailpage/Liverdetail";
 import Manudetailpage from "./component/Manudetailpage/manudetail";
 import Manudetail from "./component/Manudetailpage/manudetail";
+import Arsenaldetailpage from "./component/Arsenaldetailpage/arsenaldetail";
+import Arsenaldetail from "./component/Arsenaldetailpage/arsenaldetail";
+
 
 function App() {
   return (
@@ -58,6 +61,16 @@ function App() {
           {/* Route for individual product detail */}
           <Route path="/Manudetailpage/:id">
             <Manudetail />
+          </Route>
+
+          {/* Additional route for product details with parameter */}
+          <Route exact path="/Arsenaldetailpage/:id">
+            <Arsenaldetailpage />
+          </Route>
+
+          {/* Route for individual product detail */}
+          <Route path="/Arsenaldetailpage/:id">
+            <Arsenaldetail />
           </Route>
 
         </Switch>

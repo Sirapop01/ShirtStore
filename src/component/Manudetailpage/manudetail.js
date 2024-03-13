@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom'; // Import Link and useParams from react-router-dom
+import { useParams } from 'react-router-dom';
 import './manudetail.css';
 import Manushirt from './Pict/manushirt.png';
 
@@ -11,9 +11,7 @@ const Manudetailpage = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        console.log('Fetching product with id:', id);
         const response = await axios.get(`http://localhost:5000/Manudetails/${id}`);
-        console.log('Response:', response.data);
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching product:', error);
@@ -25,23 +23,29 @@ const Manudetailpage = () => {
 
   return (
     <div className="container">
-      <div className="Manu-info">
-        {/* Render Manushirt image and ManUnited heading */}
-        <div className="Shirt-main-manu">
-          <img src={Manushirt} alt="Shirt Manu" className="Shirt-Manu" />
-        </div> 
-        <center><h1 style={{ color: 'black' }}>#ManUnited</h1></center> 
-        {/* Display the product data */}
-        <Link key={product && product._id} to={`/Manudetailpage/${product && product._id}`} className="product-link">
+        {product && (
           <div className="product-items">
-            <h3 className="product-Name">{product && product.name}</h3>
-            <h3 className="product-Starting">Starting From {product && product.Starting_From}</h3>
-            <h3 className="product-Highest">Highest Bid {product && product.Highest_Bid}</h3>
-            <h3 className="product-Last">Last sale {product && product.Last_sale}</h3>
+              <img src={product.img} className="product-Image" />
+              <h1 className="man-united-heading">#ManUnited</h1> 
+            <div className="product-manuname">
+              <h2 className="product-Name">{product.name}</h2>
+            <div className="product-detail">
+              <h3 className="product-Starting">Starting From <span>{product.Starting_From}</span></h3>
+              <h3 className="product-Highest">Highest Bid <span>{product.Highest_Bid}</span></h3>
+              <h3 className="product-Last">Last sale <span>{product.Last_sale}</span></h3> 
+              
+              <div className="product-list">
+              <h3 className="product-d">{product.PD}</h3>
+              <h3 className="product-brand">Brand {product.Brand}</h3>
+              <h3 className="product-color">Color {product.Color}</h3>
+              <h3 className="product-date">Release Date {product.Release_Date}</h3>
+              <h3 className="product-size">Size {product.Size}</h3>
           </div>
-        </Link>
-      </div>
-    </div>
+          </div>
+          </div>
+          </div>
+        )}
+      </div>  
   );
 }
 

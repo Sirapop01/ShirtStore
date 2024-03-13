@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff; /* Set background color to white */
+  }
+  
+  .Manu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* กำหนดความสูงเต็มหน้าจอ */
+    margin-top: -5vh;
+  }
+  
+  .Shirt-main-manu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .Shirt-Manu {
+    background-image: url(./Pict/arsshirt.png);
+    margin-right: 1000px;
+  }
+
+  .product-shirt {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  .man-united-heading {
+    color: black; /* สีข้อความเป็นสีดำ */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+    margin-right: 1000px;
+  }
+
+  .product-Name {
+    color: black;
+    font-size: 24px;
+    text-align: right; /* จัดข้อความไปทางขวา */
+  }
+
+  
+
+  
+  

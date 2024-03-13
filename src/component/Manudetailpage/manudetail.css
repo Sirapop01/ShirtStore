@@ -6,34 +6,66 @@
     background-color: #fff; /* Set background color to white */
   }
   
-  .Manu-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* กำหนดความสูงเต็มหน้าจอ */
-    margin-top: -12vh;
-  }
-  
-  .Shirt-main-manu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .Shirt-Manu {
-    background-image: url(./Pict/manushirt.png);
-  }
-
-  .product-shirt {
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: black;
+  .man-united-heading {
+    color: black; /* สีข้อความเป็นสีดำ */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+    margin-left: 120px;
   }
 
   .product-Name {
     color: black;
+    font-size: 24px;
+    text-align: center; /* จัดข้อความไปทางขวา */
+    margin-right: 150px;
+    margin-top: -450px;
   }
+
+  .product-detail{
+  display: flex;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px; /* ระยะห่างระหว่างคลาสทั้งสาม */
+  grid-template-columns: repeat(3, 250px);
+  margin-left: 500px;
+  margin-top: 20px;
+}
+
+.product-Starting,
+.product-Highest,
+.product-Last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px; /* ระยะห่างระหว่างคลาสทั้งสาม */
+}
+
+.product-Starting span,
+.product-Highest span,
+.product-Last span {
+  font-weight: bold;
+}
+
+.product-Image {
+  margin-top: -400px;
+  width: 400px; /* กำหนดความกว้างของรูป */
+  height: 400px; /* กำหนดความสูงของรูป */
+}
+
+.product-d {
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.product-brand {
+  display: flex;
+  
+  
+}
+
+  
   

@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import './arsenaldetail.css';
+import arsshirt from './Pict/arsshirt.png';
 
-const arsenaldetail = () => {
-  const { id } = useParams();  // Assuming category is fixed as 'lfcdetails'
+const Arsenaldetailpage = () => {
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/arsdetails/${id}`);
-        const data = await response.json();
-        setProduct(data);
+        const response = await axios.get(`http://localhost:5000/arsdetail/${id}`);
+        setProduct(response.data);
       } catch (error) {
         console.error('Error fetching product:', error);
       }
@@ -20,19 +22,23 @@ const arsenaldetail = () => {
   }, [id]);
 
   return (
-    <div>
-      {product ? (
-        <div>
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
-          <p>Price: ${product.price}</p>
-          {/* Add more details as needed */}
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
+    <div className="container">
+      <div className="Manu-info">
+        <div className="Shirt-main-manu">
+          <img src={arsshirt} alt="Shirt Manu" className="Shirt-Manu" />
+        </div> 
+        <h1 className="man-united-heading">#ManUnited</h1> 
+        {product && (
+          <div className="product-items">
+            <h3 className="product-Name">{product.name}</h3>
+            <h3 className="product-Starting">Starting From {product.Starting_From}</h3>
+            <h3 className="product-Highest">Highest Bid {product.Highest_Bid}</h3>
+            <h3 className="product-Last">Last sale {product.Last_sale}</h3>
+          </div>
+        )}
+      </div>
     </div>
   );
-};
+}
 
-export default arsenaldetail;
+export default Arsenaldetailpage;

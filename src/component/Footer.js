@@ -6,6 +6,7 @@ function Footer() {
         <div className="footer">
             <div className="text">BECOME PART OF THE TEAM YOU LOVE</div>
         </div>
+        
     );
 }
 
