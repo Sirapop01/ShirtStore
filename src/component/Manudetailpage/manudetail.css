@@ -101,6 +101,53 @@
   color: #000;
 }
 
+.buy-button {
+  width: 40%;
+  height: 70px;
+    padding: 15px 120px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+    transform: translateX(600px) translateY(80px)
+    
+}
+.footer1 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* กำหนดความสูงของ footer เป็น 60px (ปรับตามที่ต้องการ) */
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+.backButton {
+  border: none;
+  background: none;
+  margin-right: 1800px; /* ขยับปุ่มไปทางขวาเล็กน้อย */
+  position: fixed; /* ติดตั้งปุ่มให้อยู่ตำแหน่งที่ต้องการ */
+  bottom: 13px; /* ย้ายปุ่มขึ้นไป 20px จากด้านล่าง */
+  right: -180px; /* ย้ายปุ่มไปทางขวา 20px จากด้านขวา */
+  z-index: 900; /* ให้ปุ่มอยู่ด้านหน้าของ footer */
+}
+
+
+.backButton img {
+  width: 50px; /* กำหนดความกว้างของรูปภาพ */
+  height: auto; /* ความสูงอัตโนมัติ */
+
+}
+
+
 
 
 

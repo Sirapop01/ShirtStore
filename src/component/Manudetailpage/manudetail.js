@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import './manudetail.css';
+import backArrow from './Pict/backArrow.png';
+
 
 
 const Manudetailpage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-
-  useEffect(() => {
+  const history = useHistory();
+  
+    useEffect(() => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(`http://localhost:5000/Manudetails/${id}`);
@@ -20,6 +23,10 @@ const Manudetailpage = () => {
 
     fetchProduct();
   }, [id]);
+
+  const goBack = () => {
+    history.goBack(); // ใช้ history.goBack() เพื่อย้อนกลับไปหน้าก่อนหน้า
+  };
 
   return (
     <div className="container">
@@ -43,8 +50,18 @@ const Manudetailpage = () => {
           </div>
           </div>
           </div>
+          {/* เพิ่มปุ่ม Buy */}
+          <button className="buy-button">Buy</button>
           </div>
+          
         )}
+
+<footer className="footer1">
+        
+        <button className="backButton" onClick={goBack}>
+          <img src={backArrow} alt="Back Arrow" /> {/* ใช้รูปภาพของลูกศร */}
+        </button>
+      </footer>
       </div>  
   );
 }

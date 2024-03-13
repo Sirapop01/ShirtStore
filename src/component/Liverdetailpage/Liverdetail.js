@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import './liverdetail.css';
+import backArrow from './Pict/backArrow.png';
 
 const Liverdetailpage = () => {
   const { id } = useParams();  // Assuming category is fixed as 'lfcdetails'
   const [product, setProduct] = useState(null);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -19,6 +21,10 @@ const Liverdetailpage = () => {
 
     fetchProduct();
   }, [id]);
+
+  const goBack = () => {
+    history.goBack(); // ใช้ history.goBack() เพื่อย้อนกลับไปหน้าก่อนหน้า
+  };
 
   return (
     <div className="container">
@@ -41,9 +47,17 @@ const Liverdetailpage = () => {
               <h3 className="product-sizelfc">Size <span>{product.Size}</span></h3>
           </div>
           </div>
+          <button className="buy-button">Buy</button>
           </div>
         
         )}
+          <footer className="footer1">
+        
+        <button className="backButton" onClick={goBack}>
+          <img src={backArrow} alt="Back Arrow" /> {/* ใช้รูปภาพของลูกศร */}
+        </button>
+      </footer>
+
       </div>  
   );
 }

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import './arsenaldetail.css';
-
+import backArrow from './Pict/backArrow.png';
 
 const Arsenaldetailpage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -20,6 +21,9 @@ const Arsenaldetailpage = () => {
 
     fetchProduct();
   }, [id]);
+    const goBack = () => {
+      history.goBack(); // ใช้ history.goBack() เพื่อย้อนกลับไปหน้าก่อนหน้า
+  };
 
   return (
     <div className="container">
@@ -43,8 +47,16 @@ const Arsenaldetailpage = () => {
           </div>
           </div>
           </div>
+          <button className="buy-button">Buy</button>
           </div>
         )}
+
+        <footer className="footer1">
+        
+        <button className="backButton" onClick={goBack}>
+          <img src={backArrow} alt="Back Arrow" /> {/* ใช้รูปภาพของลูกศร */}
+        </button>
+      </footer>
       </div>  
   );
 }
