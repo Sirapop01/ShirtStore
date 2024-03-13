@@ -6,7 +6,7 @@
     background-color: #fff; /* Set background color to white */
   }
   
-  .man-united-heading {
+  .man-city-heading {
     color: black; /* สีข้อความเป็นสีดำ */
     font-size: 24px; /* ขนาดตัวอักษร */
     text-align: center; /* จัดข้อความตรงกลาง */
@@ -14,7 +14,7 @@
     margin-left: 120px;
   }
 
-  .product-Name {
+  .product-Namemanci {
     color: black;
     font-size: 24px;
     text-align: center; /* จัดข้อความไปทางขวา */
@@ -34,63 +34,35 @@
   margin-top: 20px;
 }
 
-.product-detail h3 {
-  font-weight: normal; /* ตั้งค่าน้ำหนักของตัวอักษรเป็นปกติ */
-}
-
-.product-detail .product-Starting,
-.product-detail .product-Highest,
-.product-detail .product-Last {
+.product-Starting,
+.product-Highest,
+.product-Last {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-right: 20px; /* ระยะห่างระหว่างคลาสทั้งสาม */
-  font-weight: normal;
-  color: gray;
 }
 
-.product-detail .product-Starting span,
-.product-detail .product-Highest span,
-.product-detail .product-Last span {
-  color: black;
-
+.product-Starting span,
+.product-Highest span,
+.product-Last span {
+  font-weight: bold;
 }
 
 .product-Image {
   margin-top: -400px;
   width: 400px; /* กำหนดความกว้างของรูป */
   height: 400px; /* กำหนดความสูงของรูป */
-  border-top: 1px solid #000; /* เส้นขอบด้านบน */
-  border-bottom: 1px solid #000; /* เส้นขอบด้านล่าง */
-  border-left: 1px solid #000; /* เส้นขอบด้านล่าง */
-  border-right: 1px solid #000; /* เส้นขอบด้านล่าง */
 }
 
-.product-List {
-  width: 700px;
-  margin-top: 20px;
-  margin-left: 5px;
-  padding: 10px 0; /* เพิ่มพื้นที่ด้านบนและด้านล่างของ block */
-  border-top: 1px solid #000; /* เพิ่มเส้นด้านบนของ block */
-  border-bottom: 1px solid #000; /* เพิ่มเส้นด้านล่างของ block */
-  font-weight: normal;
+.product-d {
+  margin-left: 50px;
+  margin-top: 40px;
 }
 
-.product-List h3 {
-  width: 1000px; /* ปรับขนาดตามที่ต้องการ */
-  margin-left: 45px;
-  font-weight: normal;
+.product-brand {
+  display: flex;
+  
   
 }
-
-
-
-
-
-  
-  
-
-
-  
-  

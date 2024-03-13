@@ -13,7 +13,8 @@ import Manudetailpage from "./component/Manudetailpage/manudetail";
 import Manudetail from "./component/Manudetailpage/manudetail";
 import Arsenaldetailpage from "./component/Arsenaldetailpage/arsenaldetail";
 import Arsenaldetail from "./component/Arsenaldetailpage/arsenaldetail";
-
+import Mancidetailpage from "./component/Mancidetailpage/mancidetail";
+import Mancidetail from "./component/Mancidetailpage/mancidetail";
 
 function App() {
   return (
@@ -71,6 +72,15 @@ function App() {
           {/* Route for individual product detail */}
           <Route path="/Arsenaldetailpage/:id">
             <Arsenaldetail />
+          </Route>
+
+          <Route exact path="/Mancidetailpage/:id">
+            <Mancidetailpage />
+          </Route>
+
+          {/* Route for individual product detail */}
+          <Route path="/Mancidetailpage/:id">
+            <Mancidetail />
           </Route>
 
         </Switch>

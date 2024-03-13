@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './manudetail.css';
-import Manushirt from './Pict/manushirt.png';
+
 
 const Manudetailpage = () => {
   const { id } = useParams();
@@ -34,7 +34,7 @@ const Manudetailpage = () => {
               <h3 className="product-Highest">Highest Bid <span>{product.Highest_Bid}</span></h3>
               <h3 className="product-Last">Last sale <span>{product.Last_sale}</span></h3> 
               
-              <div className="product-list">
+              <div className="product-List">
               <h3 className="product-d">{product.PD}</h3>
               <h3 className="product-brand">Brand {product.Brand}</h3>
               <h3 className="product-color">Color {product.Color}</h3>
