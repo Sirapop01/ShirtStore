@@ -147,3 +147,7 @@ color: #000;
   height: auto; /* ความสูงอัตโนมัติ */
 
 }
+
+.buy-link {
+  text-decoration: none;
+}

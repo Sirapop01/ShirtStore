@@ -115,7 +115,6 @@
     outline: none;
     border-radius: 15px;
     transform: translateX(600px) translateY(80px)
-    
 }
 .footer1 {
   position: fixed;
@@ -147,6 +146,9 @@
 
 }
 
+.buy-link {
+  text-decoration: none;
+}
 
 
 

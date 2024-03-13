@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link} from 'react-router-dom';
 import './manudetail.css';
 import backArrow from './Pict/backArrow.png';
 
@@ -51,7 +51,9 @@ const Manudetailpage = () => {
           </div>
           </div>
           {/* เพิ่มปุ่ม Buy */}
-          <button className="buy-button">Buy</button>
+          <Link to={"/Manupayment/"+ product._id} className="buy-link">
+        <button className="buy-button">Buy</button>
+      </Link>
           </div>
           
         )}

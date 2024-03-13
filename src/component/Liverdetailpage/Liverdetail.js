@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 import './liverdetail.css';
 import backArrow from './Pict/backArrow.png';
 
@@ -47,7 +47,9 @@ const Liverdetailpage = () => {
               <h3 className="product-sizelfc">Size <span>{product.Size}</span></h3>
           </div>
           </div>
-          <button className="buy-button">Buy</button>
+          <Link to={"/Liverpayment/"+ product._id} className="buy-link">
+        <button className="buy-button">Buy</button>
+      </Link>
           </div>
         
         )}

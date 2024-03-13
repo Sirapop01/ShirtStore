@@ -4,6 +4,9 @@
     align-items: center;
     height: 100vh;
     background-color: #fff; /* Set background color to white */
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
   }
   
   .man-city-heading {
@@ -146,4 +149,8 @@
   width: 50px; /* กำหนดความกว้างของรูปภาพ */
   height: auto; /* ความสูงอัตโนมัติ */
 
+}
+
+.buy-link {
+  text-decoration: none;
 }
