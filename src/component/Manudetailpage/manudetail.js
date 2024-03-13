@@ -30,9 +30,9 @@ const Manudetailpage = () => {
             <div className="product-manuname">
               <h2 className="product-Namemanu">{product.name}</h2>
             <div className="product-detailmanu">
-              <h3 className="product-Startingmanu">Starting From <span>{product.Starting_From}</span></h3>
-              <h3 className="product-Highestmanu">Highest Bid <span>{product.Highest_Bid}</span></h3>
-              <h3 className="product-Lastmanu">Last sale <span>{product.Last_sale}</span></h3> 
+              <h3 className="product-Startingmanu">Starting From <span>฿ {product.Starting_From}</span></h3>
+              <h3 className="product-Highestmanu">Highest Bid <span>฿ {product.Highest_Bid}</span></h3>
+              <h3 className="product-Lastmanu">Last sale <span>฿ {product.Last_sale}</span></h3> 
               
               <div className="product-Listmanu">
               <h3 className="product-dmanu">{product.PD}</h3>

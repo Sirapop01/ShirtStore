@@ -30,9 +30,9 @@ const Arsenaldetailpage = () => {
             <div className="product-manunamears">
               <h2 className="product-Namears">{product.name}</h2>
             <div className="product-detailars">
-              <h3 className="product-Startingars">Starting From <span>{product.Starting_From}</span></h3>
-              <h3 className="product-Highestars">Highest Bid <span>{product.Highest_Bid}</span></h3>
-              <h3 className="product-Lastars">Last sale <span>{product.Last_sale}</span></h3> 
+              <h3 className="product-Startingars">Starting From <span>฿ {product.Starting_From}</span></h3>
+              <h3 className="product-Highestars">Highest Bid <span>฿ {product.Highest_Bid}</span></h3>
+              <h3 className="product-Lastars">Last sale <span>฿ {product.Last_sale}</span></h3> 
               
               <div className="product-Listars">
               <h3 className="product-dars">{product.PD}</h3>

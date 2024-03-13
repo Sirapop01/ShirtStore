@@ -29,9 +29,9 @@ const Liverdetailpage = () => {
            
               <h2 className="product-Namelfc">{product.name}</h2>
             <div className="product-detaillfc">
-              <h3 className="product-Startinglfc">Starting From <span>{product.Starting_From}</span></h3>
-              <h3 className="product-Highestlfc">Highest Bid <span>{product.Highest_Bid}</span></h3>
-              <h3 className="product-Lastlfc">Last sale <span>{product.Last_sale}</span></h3> 
+              <h3 className="product-Startinglfc">Starting From <span>฿ {product.Starting_From}</span></h3>
+              <h3 className="product-Highestlfc">Highest Bid <span>฿ {product.Highest_Bid}</span></h3>
+              <h3 className="product-Lastlfc">Last sale <span>฿ {product.Last_sale}</span></h3> 
               
               <div className="product-listlfc">
               <h3 className="product-dlfc">{product.PD}</h3>

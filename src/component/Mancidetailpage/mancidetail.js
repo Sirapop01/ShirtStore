@@ -29,9 +29,9 @@ const Mancidetailpage = () => {
                
                   <h2 className="product-Namemanci">{product.name}</h2>
                 <div className="product-detailmanci">
-                  <h3 className="product-Startingmanci">Starting From <span>{product.Starting_From}</span></h3>
-                  <h3 className="product-Highestmanci">Highest Bid <span>{product.Highest_Bid}</span></h3>
-                  <h3 className="product-Lastmanci">Last sale <span>{product.Last_sale}</span></h3> 
+                  <h3 className="product-Startingmanci">Starting From <span>฿ {product.Starting_From}</span></h3>
+                  <h3 className="product-Highestmanci">Highest Bid <span>฿ {product.Highest_Bid}</span></h3>
+                  <h3 className="product-Lastmanci">Last sale <span>฿ {product.Last_sale}</span></h3> 
                   
                   <div className="product-listmanci">
                   <h3 className="product-dmanci">{product.PD}</h3>

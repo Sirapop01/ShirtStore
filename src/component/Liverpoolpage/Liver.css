@@ -58,3 +58,7 @@ h1, h2, h3 {
   font-size: 14px;
   color: #a0a0a0;
 }
+
+.product-link {
+  text-decoration: none; /* ลบเส้นใต้ข้อความ */
+}
