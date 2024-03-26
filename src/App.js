@@ -16,6 +16,8 @@ import Mancidetailpage from "./component/Mancidetailpage/mancidetail";
 import Mancidetail from "./component/Mancidetailpage/mancidetail";
 import Liverdetailpage from "./component/Liverdetailpage/liverdetail";
 import Liverdetail from "./component/Liverdetailpage/liverdetail";
+import ManUPaymentPage from "./component/ManUPaymentpage/Manupayment";
+import Manupayment from "./component/ManUPaymentpage/Manupayment";
 
 function App() {
   return (
@@ -88,8 +90,12 @@ function App() {
             <Liverdetail />
           </Route>
 
-          <Route>
-            
+          <Route exact path="/ManUPaymentpage/:id">
+            <ManUPaymentPage />
+          </Route>
+
+          <Route path="/ManUPaymentpage/:id">
+            <Manupayment />
           </Route>
 
         </Switch>

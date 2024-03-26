@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.Block-Payment {
+  background-color: black; /* Set background color to black */
+  width: 1600px; /* Set width of the block */
+  height: 115px; /* Set height of the block */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 800px;
+  display: flex; /* เพิ่มการใช้ Flexbox */
+  align-items: center;
+}
+
+
+
+.Payment-heading {
+  color: white;
+  margin-left: 30px;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+.Logo-payment {
+  margin-left: 50px;
+  width: 100px;
+  height: 70px;
+}
+
+.Block-Shirt {
+  background-color: rgb(255, 255, 255); /* Set background color to black */
+  width: 40%; /* Set width of the block */
+  height: 100px; /* Set height of the block */
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-left: -360px;
+  margin-top: 300px;
+
+  display: flex;
+  
+}
+
+.img-payment {
+  width: 80px;
+  height: 80px;
+  margin-left: 15px;
+  margin-top: 5px;
+  object-fit: cover;
+}
+
+.Teamshirt {
+  margin-left: 20px;
+  margin-top: 3px;
+}
+
+.payment-Namemanu {
+  /* ทำให้ข้อความอยู่ในบรรทัดแยกกัน */
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  font-size: 20px;
+}
+
+.football-Namemanu {
+ /* ทำให้ข้อความอยู่ในบรรทัดแยกกัน */
+  font-size: 15px;
+  font-weight: normal;
+  
+}
+
+.shirtDetails {
+  
+  width: 625px;
+  height: 300px;
+  margin-left: -110px;
+  margin-top: 100px;
+}
+
+.product-size1,
+.product-package,
+.product-condition,
+.product-price1 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

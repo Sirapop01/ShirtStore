@@ -51,7 +51,7 @@ const Manudetailpage = () => {
           </div>
           </div>
           {/* เพิ่มปุ่ม Buy */}
-          <Link to={"/Manupayment/"+ product._id} className="buy-link">
+          <Link to={"/ManUpaymentpage/"+ product._id} className="buy-link">
         <button className="buy-button">Buy</button>
       </Link>
           </div>
