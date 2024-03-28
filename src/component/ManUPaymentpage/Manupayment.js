@@ -40,13 +40,18 @@ const ManUpaymentpage = () => {
 
 
   const applyDiscount = () => {
-    let discountedPrice = product.Price;
-    if (discountApplied) {
-      // คำนวณราคาหลังลด 5%
-      discountedPrice -= (product.Price * 0.15);
+    if (product) {
+      let discountedPrice = product.Price;
+      if (discountApplied) {
+        // คำนวณราคาหลังลด 5%
+        discountedPrice -= (product.Price * 0.15);
+      }
+      return discountedPrice.toFixed(0); // แปลงเป็นทศนิยม 0 ตำแหน่ง
+    } else {
+      return "0"; // หรือค่าเริ่มต้นที่คุณต้องการให้แสดงถ้าไม่มีสินค้า
     }
-    return discountedPrice.toFixed(0); // แปลงเป็นทศนิยม 0 ตำแหน่ง
   };
+  
 
   return (
     <div className="container">
