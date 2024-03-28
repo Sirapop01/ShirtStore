@@ -1,13 +1,15 @@
+// Payment.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import './Manupayment.css';
 import Logopayment from './Picture/Vector.png';
+import backArrow2 from './Picture/left.png';
 
-
-const Payment = () => {
+const ManUpaymentpage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const history = useHistory();
   const [paymentInfo, setPaymentInfo] = useState({
     cardNumber: '',
     expirationDate: '',
@@ -27,54 +29,52 @@ const Payment = () => {
     fetchProduct();
   }, [id]);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setPaymentInfo({ ...paymentInfo, [name]: value });
-  };
-
-  const handlePayment = async (e) => {
-    e.preventDefault();
-    try {
-      // Send payment details to the server for processing
-      const response = await axios.post('http://localhost:5000/process-payment', {
-        productId: id,
-        paymentInfo
-      });
-      console.log('Payment successful:', response.data);
-      // Optionally, you can redirect the user to a confirmation page or show a success message
-    } catch (error) {
-      console.error('Error processing payment:', error);
-      // Handle errors (e.g., show an error message to the user)
-    }
+  const goBack = () => {
+    history.goBack(); // ใช้ history.goBack() เพื่อย้อนกลับไปหน้าก่อนหน้า
   };
 
   return (
     <div className="container">
       {product && (
         <div className="Block-Payment">
-        <img src={Logopayment} className="Logo-payment" />
-        <h1 className="Payment-heading">Payment</h1>        
-        <div className="Block-Shirt">
-           <img src={product.img} className="img-payment" />
-           <div className="Teamshirt">
-           <h2 className="payment-Namemanu">{product.name}</h2>
-           <h2 className="football-Namemanu">MANCHESTER UNITED FOOTBALL SHIRT</h2>
+          <img src={Logopayment} alt="" className="Logo-payment" />
+          <h1 className="Payment-heading">Payment</h1>        
+          <div className="Block-Shirt">
+            <img src={product.img} alt="" className="img-payment" />
+            <div className="Teamshirt">
+              <h2 className="payment-Namemanu">{product.name}</h2>
+              <h2 className="football-Namemanu">MANCHESTER UNITED FOOTBALL SHIRT</h2>
 
-           <div className="shirtDetails">
-           <h3 className="product-size1">Size <span>{product.Size}</span></h3>
-           <h3 className="product-package">Packaging Seal <span>{product.Packaging_Seal}</span></h3>
-           <h3 className="product-condition">Condition <span>{product.Condition}</span></h3>
-           <h3 className="product-price1">Price <span>฿ {product.Price}</span></h3>
-           </div>
-           </div>
-        </div>
+              <div className="shirtDetails">
+                <h3 className="product-size1">Size <span>{product.Size}</span></h3>
+                <h3 className="product-package">Packaging Seal <span>{product.Packaging_Seal}</span></h3>
+                <h3 className="product-condition">Condition <span>{product.Condition}</span></h3>
+                <h3 className="product-price1">Price <span>฿ {product.Price}</span></h3>
+
+                <div className="Address">
+                    <h3 className="address">Address</h3>
+                    <input type="text" className="add-address" placeholder="+ Address" />
+
+                    <div children="Payment">
+                       <h3 className="payment">Payment</h3>
+                  
+                  </div>    
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* เพิ่มเส้นขั้นตรงกลาง */}
+          <div className="midline"></div>
         </div>
       )}
       
+      <footer className="footer2">
+        <button className="backButton" onClick={goBack}>
+          <img src={backArrow2} alt="Back Arrow" /> {/* ใช้รูปภาพของลูกศร */}
+        </button>
+      </footer>
     </div>
-
-    
   );
 }
 
-export default Payment;
+export default ManUpaymentpage;
