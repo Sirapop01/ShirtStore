@@ -1,0 +1,204 @@
+.container {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .Block-Payment {
+    background-color: black; /* Set background color to black */
+    width: 1600px; /* Set width of the block */
+    height: 115px; /* Set height of the block */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 800px;
+    display: flex; /* เพิ่มการใช้ Flexbox */
+    align-items: center;
+  }
+  
+  
+  
+  .Payment-heading {
+    color: white;
+    margin-left: 30px;
+    font-size: 55px;
+    font-weight: normal;
+  }
+  
+  .Logo-payment {
+    margin-left: 50px;
+    width: 100px;
+    height: 70px;
+  }
+  
+  .Block-Shirt {
+    background-color: rgb(255, 255, 255); /* Set background color to black */
+    width: 40%; /* Set width of the block */
+    height: 100px; /* Set height of the block */
+    border: 2px solid #000000;
+    border-radius: 20px;
+    margin-left: -300px;
+    margin-top: 330px;
+  
+    display: flex;
+    
+  }
+  
+  .img-payment {
+    width: 80px;
+    height: 80px;
+    margin-left: 15px;
+    margin-top: 5px;
+    object-fit: cover;
+  }
+  
+  .Teamshirt {
+    margin-left: 20px;
+    margin-top: 3px;
+  }
+  
+  .payment-Namemanu {
+    /* ทำให้ข้อความอยู่ในบรรทัดแยกกัน */
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+    font-size: 20px;
+  }
+  
+  .football-Namemanu {
+   /* ทำให้ข้อความอยู่ในบรรทัดแยกกัน */
+    font-size: 15px;
+    font-weight: normal;
+    
+  }
+  
+  .shirtDetails {
+    
+    width: 625px;
+    height: 300px;
+    margin-left: -110px;
+    margin-top: 100px;
+  }
+  
+  .product-size1,
+  .product-package,
+  .product-condition,
+  .product-price1 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* กำหนดความสูงของ footer เป็น 60px (ปรับตามที่ต้องการ) */
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  
+    border-top: solid rgb(0, 0, 0);
+  }
+  
+  /* Manupayment.css */
+  .midline {
+    width: 3.5px; /* กำหนดความกว้างของเส้นขั้นตรง */
+    height: 600px; /* กำหนดความสูงให้เท่ากับความสูงของ container */
+    background-color: rgb(0, 0, 0); /* กำหนดสีเทา */
+    position: absolute; /* กำหนดให้ติดตั้งอยู่ในตำแหน่งแน่นอน */
+    left: 880px; /* ย้ายเส้นขั้นไปที่กึ่งกลางตามแนวนอน */
+    transform: translateX(-10px) translateY(390px); /* ทำการย้ายเส้นขั้นกลับไปที่ศูนย์กลางตามแนวนอน */
+    margin-top: 20px;
+    border-radius: 20px;
+   
+  }
+  
+  .Address {
+    margin-left: 800px;
+    margin-top: -447px;
+  }
+  
+  .address {
+    font-weight: normal;
+  }
+  
+  .add-address {
+    width: 600px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #000000; /* เพิ่มสีกรอบด้วย border */
+    padding: 20px;
+  }
+  
+  .Payment {
+    width: 600px;
+    height: 300px;
+    margin-top: 35px;
+  }
+  
+  .payment {
+    font-weight: normal;
+  }
+  
+  .payment-method {
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .Discount {
+    font-weight: normal;
+    margin-top: 40px;
+  }
+  
+  .add-discount {
+    border: 2px solid #000000;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 400px;
+    display: flex;
+    margin-top: -50px;
+  }
+  
+  .discounted-price {
+    font-weight: normal;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Shipping {
+    font-weight: normal;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Fee {
+    font-weight: normal;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .PaymentButton {
+    width: 300px;
+    height: 50px;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    border: solid #000000;
+  }
+  
+  .Btt-payment span {
+    color: rgb(14, 197, 14);
+  }
