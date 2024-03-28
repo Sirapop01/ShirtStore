@@ -10,11 +10,7 @@ const ManUpaymentpage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const history = useHistory();
-  const [paymentInfo, setPaymentInfo] = useState({
-    cardNumber: '',
-    expirationDate: '',
-    cvv: ''
-  });
+  const [discountApplied, setDiscountApplied] = useState(false);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -31,6 +27,25 @@ const ManUpaymentpage = () => {
 
   const goBack = () => {
     history.goBack(); // ใช้ history.goBack() เพื่อย้อนกลับไปหน้าก่อนหน้า
+  };
+
+  const handleDiscountChange = (event) => {
+    const addressValue = event.target.value.toLowerCase();
+    if (addressValue.includes('ไอซ์รักอู้ด')) {
+      setDiscountApplied(true);
+    } else {
+      setDiscountApplied(false);
+    }
+  };
+
+
+  const applyDiscount = () => {
+    let discountedPrice = product.Price;
+    if (discountApplied) {
+      // คำนวณราคาหลังลด 5%
+      discountedPrice -= (product.Price * 0.15);
+    }
+    return discountedPrice.toFixed(0); // แปลงเป็นทศนิยม 0 ตำแหน่ง
   };
 
   return (
@@ -55,9 +70,15 @@ const ManUpaymentpage = () => {
                     <h3 className="address">Address</h3>
                     <input type="text" className="add-address" placeholder="+ Address" />
 
-                    <div children="Payment">
+                    <div className="Payment">
                        <h3 className="payment">Payment</h3>
-                  
+                       <h3 className="payment-method">Payment Method <span>Credit / Debit card</span></h3>  
+                       <h3 className="Discount">Discount Code</h3>
+                       <input type="text" className="add-discount" placeholder="+ Discount Code" onChange={handleDiscountChange} />
+                       <h3 className="Shipping">Shipping Fee <span>Free</span></h3>
+                       <h3 className="Fee">Fee <span>Free</span></h3>
+                       <h3 className="discounted-price">Total  <span>฿ {applyDiscount()}</span></h3>
+                    
                   </div>    
                 </div>
               </div>
@@ -72,6 +93,9 @@ const ManUpaymentpage = () => {
         <button className="backButton" onClick={goBack}>
           <img src={backArrow2} alt="Back Arrow" /> {/* ใช้รูปภาพของลูกศร */}
         </button>
+        <button className="PaymentButton">
+              <h3 className="Btt-payment">Continue to payment <span>฿ {applyDiscount()}</span></h3>
+          </button>
       </footer>
     </div>
   );

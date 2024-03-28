@@ -136,5 +136,69 @@
 }
 
 .Payment {
-  margin-top: -500px;
+  width: 600px;
+  height: 300px;
+  margin-top: 35px;
+}
+
+.payment {
+  font-weight: normal;
+}
+
+.payment-method {
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.Discount {
+  font-weight: normal;
+  margin-top: 40px;
+}
+
+.add-discount {
+  border: 2px solid #000000;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 400px;
+  display: flex;
+  margin-top: -50px;
+}
+
+.discounted-price {
+  font-weight: normal;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Shipping {
+  font-weight: normal;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Fee {
+  font-weight: normal;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.PaymentButton {
+  width: 300px;
+  height: 50px;
+  background-color: #000000;
+  color: white;
+  border-radius: 10px;
+  border: solid #000000;
+}
+
+.Btt-payment span {
+  color: rgb(14, 197, 14);
 }
