@@ -202,49 +202,6 @@ def delete_shirtarsenal(shirtarsenal_id):
         return jsonify({"message": "Shirt deleted successfully"}), 200
     else:
         return jsonify({"error": "Shirt not found"}), 404
-
-# ---------------------------------------------------------------------------------------------------
-@app.route("/manushirt", methods=["GET"])
-def get_all_manushirt():
-    manushirt = list(collections["detail1"].find())
-    return jsonify(manushirt)
-
-@app.route("/manushirt/<int:manushirt_id>", methods=["GET"])
-def get_manushirt(manushirt_id):
-    manushirt = collections["detail1"].find_one({"_id": manushirt_id})
-    if manushirt:
-        return jsonify(manushirt)
-    else:
-        return jsonify({"error": "product not found"}), 404
-    
-@app.route("/manushirt", methods=["POST"])
-def create_manushirt():
-    data = request.get_json()
-    existing_manushirt = collections["detail1"].find_one({"manushirt_code": data["manushirt_code"]})
-    if existing_manushirt:
-        return jsonify({"error": "Shirt with the same product code already exists"}), 409
-    else:
-        collections["detail1"].insert_one(data)
-        return jsonify({"message": "Shirt created successfully"}), 201
-
-@app.route("/manushirt/<int:manushirt_id>", methods=["PUT"])
-def update_manushirt(manushirt_id):
-    data = request.get_json()
-    existing_manushirt = collections["detail1"].find_one({"_id": manushirt_id})
-    if existing_manushirt:
-        collections["detail1"].update_one({"_id": manushirt_id}, {"$set": data})
-        updated_manushirt = collections["detail1"].find_one({"_id": manushirt_id})
-        return jsonify(updated_manushirt)
-    else:
-        return jsonify({"error": "shirt not found"}), 404
-    
-@app.route("/manushirt/<int:manushirt_id>", methods=["DELETE"])
-def delete_manushirt(manushirt_id):
-    result = collections["detail1"].delete_one({"_id": manushirt_id})
-    if result.deleted_count:
-        return jsonify({"message": "Shirt deleted successfully"}), 200
-    else:
-        return jsonify({"error": "Shirt not found"}), 404
     
 # ---------------------------------------------------------------------------------------------------
 #Man U detail
