@@ -12,15 +12,17 @@ const Liverdetailpage = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/lfcdetails/${id}`);
+        const response = await axios.get(`http://localhost:5000/shirtLiver/${id}`);
+        console.log(response.data);  // ตรวจสอบข้อมูลที่ได้จาก API
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching product:', error);
       }
     };
-
+  
     fetchProduct();
   }, [id]);
+  
 
   const goBack = () => {
     history.goBack(); // ใช้ history.goBack() เพื่อย้อนกลับไปหน้าก่อนหน้า

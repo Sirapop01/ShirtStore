@@ -16,14 +16,7 @@ import Mancidetailpage from "./component/Mancidetailpage/mancidetail";
 import Mancidetail from "./component/Mancidetailpage/mancidetail";
 import Liverdetailpage from "./component/Liverdetailpage/liverdetail";
 import Liverdetail from "./component/Liverdetailpage/liverdetail";
-import ManUPaymentPage from "./component/ManUPaymentpage/Manupayment";
-import Manupayment from "./component/ManUPaymentpage/Manupayment";
-import MancipaymentPage from "./component/Mancipayment/mancipayment";
-import Mancipayment from "./component/Mancipayment/mancipayment";
-import LiverpaymentPage from "./component/Liverpayment/liverpayment";
-import Liverpayment from "./component/Liverpayment/liverpayment";
-import ArsenalpaymentPage from "./component/Arsenalpayment/arsenalpayment";
-import Arsenalpayment from "./component/Arsenalpayment/arsenalpayment";
+
 
 function App() {
   return (
@@ -102,30 +95,6 @@ function App() {
 
           <Route path="/ManUPaymentpage/:id">
             <Manupayment />
-          </Route>
-
-          <Route exact path="/Mancipayment/:id">
-            <MancipaymentPage />
-          </Route>
-
-          <Route path="/Mancipayment/:id">
-            <Mancipayment />
-          </Route>
-
-          <Route exact path="/Liverpayment/:id">
-            <LiverpaymentPage />
-          </Route>
-
-          <Route path="/Liverpayment/:id">
-            <Liverpayment />
-          </Route>
-
-          <Route exact path="/Arsenalpayment/:id">
-            <ArsenalpaymentPage />
-          </Route>
-
-          <Route path="/Arsenalpayment/:id">
-            <Arsenalpayment />
           </Route>
 
         </Switch>
