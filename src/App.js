@@ -89,14 +89,6 @@ function App() {
             <Liverdetail />
           </Route>
 
-          <Route exact path="/ManUPaymentpage/:id">
-            <ManUPaymentPage />
-          </Route>
-
-          <Route path="/ManUPaymentpage/:id">
-            <Manupayment />
-          </Route>
-
         </Switch>
       </div>
     </BrowserRouter>
