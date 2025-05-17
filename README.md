@@ -66,6 +66,14 @@ npm start
 
 ---
 
+## Demo Video
+
+[![Watch the demo video](https://img.youtube.com/vi/Xtr_7fixfgA/hqdefault.jpg)](https://youtu.be/Xtr_7fixfgA)
+
+ คลิกที่ภาพเพื่อชมวิดีโอสาธิต ShirtStore บน YouTube
+
+
+
 ## 🧭 Usage
 
 ### 🛒 หน้าหลัก (Home)
